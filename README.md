@@ -1,3 +1,3 @@
 # CRUD-JSP
 
-Este es un trabajo de Crud y JSP de recetas.
+Este es un trabajo de Crud, JSP y BBDD de recetas.
