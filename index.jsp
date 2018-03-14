@@ -31,6 +31,22 @@
                 %>
 
                 <table class="table table-striped">
+                    <form method="post" action="buscaReceta.jsp">
+                        <tr>
+                            <th>Nombre de la receta</th>
+                            <th>
+                                <div class="input-field">
+                                    <input type="text" name="nombre" id="buscaNombre">
+                                    <label for="buscaNombre"></label>
+                                </div>
+                                </td>
+                            <td>
+                                <button class="btn btn-primary" type="submit" name="aceptar">
+                                    <i class="glyphicon glyphicon-search"></i> Buscar
+                                </button>
+                            </td>
+                        </tr>
+                    </form>
 
                     <tr><th>Codigo</th><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Receta</th></tr>
                     <form method="get" action="grabaReceta.jsp">
@@ -54,6 +70,7 @@
                             <td><input type="text" name="InstruccionRec"/></td>
                             <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-open"></span> Añadir</button></td><td></td></tr>           
                     </form>
+
 
                     <%            while (listado.next()) {
                             out.println("<tr><td>");
@@ -97,24 +114,6 @@
                         conexion.close();
                     %>
 
-                </table>
-                <table>
-                    <form method="post" action="buscaReceta.jsp">
-                        <tr>
-                            <th>Nombre de la receta</th>
-                            <th>
-                                <div class="input-field">
-                                    <input type="text" name="nombre" id="buscaNombre">
-                                    <label for="buscaNombre"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-primary" type="submit" name="aceptar">
-                                    <i class="glyphicon glyphicon-search"></i> Buscar
-                                </button>
-                            </td>
-                        </tr>
-                    </form>
                 </table>
             </div>
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
