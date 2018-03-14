@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-03-2018 a las 12:24:34
+-- Tiempo de generación: 14-03-2018 a las 16:57:52
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -33,6 +33,23 @@ CREATE TABLE `categoria` (
   `NombreCate` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`IdCate`, `NombreCate`) VALUES
+(1, 'Carne'),
+(2, 'Pescado'),
+(3, 'Salsas'),
+(4, 'Vegetales'),
+(5, 'Aperitivos'),
+(6, 'Aves'),
+(7, 'Arroz'),
+(8, 'Legumbres'),
+(9, 'Postres'),
+(10, 'Sopa'),
+(11, 'Pasta');
+
 -- --------------------------------------------------------
 
 --
@@ -41,13 +58,24 @@ CREATE TABLE `categoria` (
 
 CREATE TABLE `recetas` (
   `IdRec` int(5) NOT NULL,
-  `nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `DescripRec` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `TiempoPrep` int(11) NOT NULL,
   `NumPorc` int(11) NOT NULL,
   `IdCate` int(11) NOT NULL,
   `InstruccionRec` varchar(10000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `recetas`
+--
+
+INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`) VALUES
+(1, 'Paella', 30, 12, 7, 'Se pone el arroz a fuego lento con el caldo del pescado cuando se ha evaporado la mayor parte del caldo se le empieza a echar el sofrito de verduras el pollo, el pescado, las gambas...'),
+(2, ' Huevos rotos', 14, 10, 5, 'Se rompe el huevo en la sarten y cuando se este poniendo con un color dorado de bate '),
+(3, ' Tacos', 30, 15, 1, 'Se calienta la carne picada, se le hecha las especies y aparte se corta lechuga, pepino, queso, tomate y se ponen en respectivos cuencos'),
+(4, ' Bocadillo de jamon y queso', 3, 1, 5, 'Se tuesta un poco el pan y despues se le pone el queso y el jamon'),
+(5, ' Sopa de cebolla', 60, 15, 10, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras'),
+(6, ' Espagueti a la carbonara', 20, 8, 11, 'Se pone los espaguetis en una olla con agua hirviendo y aparte se hace una salsa bechamel y queso y una vez que este hecho los espaguetis se le hecha la salsa por encima');
 
 --
 -- Índices para tablas volcadas
@@ -64,7 +92,17 @@ ALTER TABLE `categoria`
 --
 ALTER TABLE `recetas`
   ADD PRIMARY KEY (`IdRec`),
-  ADD UNIQUE KEY `IdCate` (`IdCate`);
+  ADD KEY `IdCate` (`IdCate`) USING BTREE;
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `recetas`
+--
+ALTER TABLE `recetas`
+  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Restricciones para tablas volcadas
