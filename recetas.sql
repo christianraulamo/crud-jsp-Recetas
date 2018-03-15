@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-03-2018 a las 16:57:52
+-- Tiempo de generación: 15-03-2018 a las 13:57:34
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -70,12 +70,14 @@ CREATE TABLE `recetas` (
 --
 
 INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`) VALUES
-(1, 'Paella', 30, 12, 7, 'Se pone el arroz a fuego lento con el caldo del pescado cuando se ha evaporado la mayor parte del caldo se le empieza a echar el sofrito de verduras el pollo, el pescado, las gambas...'),
+(1, 'Paella', 37, 12, 7, 'Se pone el arroz a fuego lento con el caldo del pescado cuando se ha evaporado la mayor parte del caldo se le empieza a echar el sofrito de verduras el pollo, el pescado, las gambas...'),
 (2, ' Huevos rotos', 14, 10, 5, 'Se rompe el huevo en la sarten y cuando se este poniendo con un color dorado de bate '),
 (3, ' Tacos', 30, 15, 1, 'Se calienta la carne picada, se le hecha las especies y aparte se corta lechuga, pepino, queso, tomate y se ponen en respectivos cuencos'),
 (4, ' Bocadillo de jamon y queso', 3, 1, 5, 'Se tuesta un poco el pan y despues se le pone el queso y el jamon'),
 (5, ' Sopa de cebolla', 60, 15, 10, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras'),
-(6, ' Espagueti a la carbonara', 20, 8, 11, 'Se pone los espaguetis en una olla con agua hirviendo y aparte se hace una salsa bechamel y queso y una vez que este hecho los espaguetis se le hecha la salsa por encima');
+(6, ' Espagueti a la carbonara', 20, 8, 11, 'Se pone los espaguetis en una olla con agua hirviendo y aparte se hace una salsa bechamel y queso y una vez que este hecho los espaguetis se le hecha la salsa por encima'),
+(10, ' pizza', 12, 8, 1, 'se mete en el horno a 220 grados durante 12 min y ya esta'),
+(12, ' piza', 12, 6, 4, 'Se mete 12 min en el horno a 220 grados y ya esta');
 
 --
 -- Índices para tablas volcadas
@@ -102,7 +104,7 @@ ALTER TABLE `recetas`
 -- AUTO_INCREMENT de la tabla `recetas`
 --
 ALTER TABLE `recetas`
-  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas

@@ -22,7 +22,7 @@
             <div class="panel panel-info">
                 <div class="panel-heading text-center">Modificación de receta</div>
                 <form method="get" action="grabaRecetaModificado.jsp">
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <label>&nbsp;&nbsp;Codigo:&nbsp;</label><input type="text" size="20" name="IdRec" value="<%= request.getParameter("IdRec")%>">
                     </div>
                     <div class="form-group">

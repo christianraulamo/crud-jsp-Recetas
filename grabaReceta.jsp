@@ -21,26 +21,16 @@
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3399/recetas", "root", "");
             Statement s = conexion.createStatement();
             
-            String consultaNumReceta = "SELECT * FROM recetas WHERE IdRec="
-                    + Integer.valueOf(request.getParameter("IdRec"));
+       
 
-            ResultSet numeroDeRecetas = s.executeQuery(consultaNumReceta);
-            numeroDeRecetas.last();
-
-            if (numeroDeRecetas.getRow() != 0) {
-                out.println("Lo siento, no se ha podido dar de alta, ya existe una receta con ese codigo "
-                        + request.getParameter("IdRec") + ".");
-            } else {
-
-                String insercion = "INSERT INTO recetas VALUES (" + Integer.valueOf(request.getParameter("IdRec"))
-                        + ",' " + request.getParameter("nombre")
+                String insercion = "INSERT INTO recetas VALUES (0," +  "' " + request.getParameter("nombre")
                         + "', " + Integer.valueOf(request.getParameter("TiempoPrep"))
                         + ", " + Integer.valueOf(request.getParameter("NumPorc"))
                         + ", " + Integer.valueOf(request.getParameter("IdCate"))
                         + ", '" + request.getParameter("InstruccionRec") + "')";
                 s.execute(insercion);
                 out.println("Receta metida correctamente.");
-            }
+            
                 conexion.close();
         %>
         <br>

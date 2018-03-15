@@ -48,10 +48,9 @@
                         </tr>
                     </form>
 
-                    <tr><th>Codigo</th><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Receta</th></tr>
+                    <tr><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Receta</th></tr>
                     <form method="get" action="grabaReceta.jsp">
-                        <tr><td><input type="text" name="IdRec" size="3"></td>
-                            <td><input type="text" name="nombre" size="30"></td>
+                        <tr><td><input type="text" name="nombre" size="30"></td>
                             <td><input type="text" name="TiempoPrep" size="15"></td>
                             <td><input type="text" name="NumPorc" size="20"></td>
                             <td><select name="IdCate" multiple="multiple">
@@ -73,7 +72,7 @@
 
 
                     <%            while (listado.next()) {
-                            out.println("<tr><td>");
+                            out.println("<tr><td style=\"display:none;\">");
                             out.println(listado.getString("IdRec") + "</td>");
                             out.println("<td>" + listado.getString("nombre") + "</td>");
                             out.println("<td>" + listado.getString("TiempoPrep") + "</td>");
@@ -82,7 +81,7 @@
                     %>
                     <td>
                         <form method="get" action="modificaReceta.jsp">
-                            <input type="hidden" name="IdRec" value="<%=listado.getString("IdRec")%>">
+                            <input type="hidden" name="IdRec" style="display: none;" value="<%=listado.getString("IdRec")%>">
                             <input type="hidden" name="nombre" value="<%=listado.getString("nombre")%>">
                             <input type="hidden" name="TiempoPrep" value="<%=listado.getString("TiempoPrep")%>">
                             <input type="hidden" name="NumPorc" value="<%=listado.getString("NumPorc")%>">
