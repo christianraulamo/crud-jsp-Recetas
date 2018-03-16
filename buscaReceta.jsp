@@ -27,7 +27,7 @@
       listado.next();
       int coincidencias = listado.getInt(1);
 
-      // Si no se encuentra ningún cliente con el nombre especificado,
+      // Si no se encuentra ningúna receta con el nombre especificado,
       // volvemos a la página principal.
       if (coincidencias == 0) {
         out.println("<script>document.location = \"index.jsp\"</script>");
@@ -35,14 +35,14 @@
 
       ResultSet listado2 = s.executeQuery ("SELECT * FROM recetas WHERE nombre LIKE '%" + request.getParameter("nombre") + "%'");
 
-      // Si hay un único cliente con el nombre especificado, vamos directamente
+      // Si hay una única receta con el nombre especificado, vamos directamente
       // a la página de detalle.
       if (coincidencias == 1) {
         listado2.next();
         out.println("<script>document.location = \"detalleReceta.jsp?IdRec=" + listado2.getInt("IdRec") + "\"</script>");
       }
 
-      // Si hay varios clientes cuyos nombres coinciden con el patrón buscado,
+      // Si hay varias recetas cuyos nombres coinciden con el patrón buscado,
       // se muestran todos esos nombres para que el usuario elija.
       if (coincidencias > 1) {
         %>
