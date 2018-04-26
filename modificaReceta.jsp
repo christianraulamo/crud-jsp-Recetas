@@ -50,7 +50,10 @@
                                 </select>
                     </div>
                     <div class="form-group">
-                        <label>&nbsp;&nbsp;Receta:&nbsp;</label><input type="text" size="100" name="InstruccionRec" value="<%= request.getParameter("InstruccionRec")%>">
+                        <label>&nbsp;&nbsp;Elaboración:&nbsp;</label><input type="text" size="100" name="InstruccionRec" value="<%= request.getParameter("InstruccionRec")%>">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;&nbsp;Ingredientes:&nbsp;</label><input type="text" size="100" name="Ingredientes" value="<%= request.getParameter("Ingredientes")%>">
                     </div>
                     <hr>
                     &nbsp;&nbsp;<a href="index.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>

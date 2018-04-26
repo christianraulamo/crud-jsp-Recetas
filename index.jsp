@@ -48,11 +48,11 @@
                         </tr>
                     </form>
 
-                    <tr><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Receta</th></tr>
+                    <tr><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Elaboración</th><th>Ingredientes</th></tr>
                     <form method="get" action="grabaReceta.jsp">
-                        <tr><td><input type="text" name="nombre" size="30"></td>
-                            <td><input type="text" name="TiempoPrep" size="15"></td>
-                            <td><input type="text" name="NumPorc" size="20"></td>
+                        <tr><td><input type="text" name="nombre" size="10"></td>
+                            <td><input type="text" name="TiempoPrep" size="18"></td>
+                            <td><input type="text" name="NumPorc" size="10"></td>
                             <td><select name="IdCate" multiple="multiple">
                                     <option value="1">Carne</option>
                                     <option value="2">Pescado</option>
@@ -67,6 +67,7 @@
                                     <option value="11">Pasta</option>
                                 </select></td>
                             <td><input type="text" name="InstruccionRec"/></td>
+                            <td><input type="text" name="Ingredientes"/></td>
                             <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-open"></span> Añadir</button></td><td></td></tr>           
                     </form>
 
@@ -87,6 +88,7 @@
                             <input type="hidden" name="NumPorc" value="<%=listado.getString("NumPorc")%>">
                             <input type="hidden" name="IdCate" value="<%=listado.getString("IdCate")%>">
                             <input type="hidden" name="InstruccionRec" value="<%=listado.getString("InstruccionRec")%>">
+                            <input type="hidden" name="Ingredientes" value="<%=listado.getString("Ingredientes")%>">
                             <button type="submit"  class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Modificar</button>
                         </form>
 
@@ -97,6 +99,7 @@
                             <input type="hidden" name="NumPorc" value="<%=listado.getString("NumPorc")%>">
                             <input type="hidden" name="IdCate" value="<%=listado.getString("IdCate")%>">
                             <input type="hidden" name="InstruccionRec" value="<%=listado.getString("InstruccionRec")%>">
+                            <input type="hidden" name="Ingredientes" value="<%=listado.getString("Ingredientes")%>">
                             <button type="submit"  class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
                         </form>
                     </td>

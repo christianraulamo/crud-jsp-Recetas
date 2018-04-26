@@ -62,6 +62,7 @@
                       <td><%=listado2.getString("nombre") %></td>
                       <form method="post" action="detalleReceta.jsp">
                         <input type="hidden" name="IdRec" value="<%=listado2.getString("IdRec") %>">
+                        <input type="hidden" name="Ingredientes" value="<%=listado2.getString("Ingredientes") %>">
                         <td>
                         <button class="btn waves-effect waves-light center purple lighten-2" type="submit" name="editar">
                           <i class="fa fa-plus-circle"></i> Detalle

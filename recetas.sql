@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-03-2018 a las 13:57:34
+-- Tiempo de generación: 26-04-2018 a las 19:23:27
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -58,26 +58,22 @@ INSERT INTO `categoria` (`IdCate`, `NombreCate`) VALUES
 
 CREATE TABLE `recetas` (
   `IdRec` int(5) NOT NULL,
-  `nombre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `TiempoPrep` int(11) NOT NULL,
   `NumPorc` int(11) NOT NULL,
   `IdCate` int(11) NOT NULL,
-  `InstruccionRec` varchar(10000) COLLATE utf8mb4_unicode_ci NOT NULL
+  `InstruccionRec` varchar(10000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Ingredientes` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `recetas`
 --
 
-INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`) VALUES
-(1, 'Paella', 37, 12, 7, 'Se pone el arroz a fuego lento con el caldo del pescado cuando se ha evaporado la mayor parte del caldo se le empieza a echar el sofrito de verduras el pollo, el pescado, las gambas...'),
-(2, ' Huevos rotos', 14, 10, 5, 'Se rompe el huevo en la sarten y cuando se este poniendo con un color dorado de bate '),
-(3, ' Tacos', 30, 15, 1, 'Se calienta la carne picada, se le hecha las especies y aparte se corta lechuga, pepino, queso, tomate y se ponen en respectivos cuencos'),
-(4, ' Bocadillo de jamon y queso', 3, 1, 5, 'Se tuesta un poco el pan y despues se le pone el queso y el jamon'),
-(5, ' Sopa de cebolla', 60, 15, 10, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras'),
-(6, ' Espagueti a la carbonara', 20, 8, 11, 'Se pone los espaguetis en una olla con agua hirviendo y aparte se hace una salsa bechamel y queso y una vez que este hecho los espaguetis se le hecha la salsa por encima'),
-(10, ' pizza', 12, 8, 1, 'se mete en el horno a 220 grados durante 12 min y ya esta'),
-(12, ' piza', 12, 6, 4, 'Se mete 12 min en el horno a 220 grados y ya esta');
+INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`, `Ingredientes`) VALUES
+(1, 'Paella', 31, 15, 7, 'uiehgqeq3erarhtedgrae', 'arroz, pescado y carne.'),
+(2, 'papa', 30, 10, 3, 'gegqeqegqer', 'edgeqw, regew'),
+(4, ' HDFSERDR', 34, 23, 1, 'aha', 'ahtrgfhate');
 
 --
 -- Índices para tablas volcadas
@@ -104,7 +100,7 @@ ALTER TABLE `recetas`
 -- AUTO_INCREMENT de la tabla `recetas`
 --
 ALTER TABLE `recetas`
-  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas

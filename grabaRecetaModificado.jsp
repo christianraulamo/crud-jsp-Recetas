@@ -29,6 +29,7 @@
                     + ", NumPorc=" + Integer.valueOf(request.getParameter("NumPorc"))
                     + ", IdCate=" + Integer.valueOf(request.getParameter("IdCate"))
                     + ", InstruccionRec='" + request.getParameter("InstruccionRec")
+                    + "', Ingredientes='" + request.getParameter("Ingredientes")
                     + "' WHERE IdRec=" + Integer.valueOf(request.getParameter("IdRec"));
             s.execute(actualizacion);
             out.println("Receta actualizado correctamente.");

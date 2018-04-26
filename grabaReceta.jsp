@@ -25,9 +25,10 @@
 
                 String insercion = "INSERT INTO recetas VALUES (0," +  "' " + request.getParameter("nombre")
                         + "', " + Integer.valueOf(request.getParameter("TiempoPrep"))
-                        + ", " + Integer.valueOf(request.getParameter("NumPorc"))
-                        + ", " + Integer.valueOf(request.getParameter("IdCate"))
-                        + ", '" + request.getParameter("InstruccionRec") + "')";
+                        + ", '" + Integer.valueOf(request.getParameter("NumPorc"))
+                        + "', " + Integer.valueOf(request.getParameter("IdCate"))
+                        + ", '" + request.getParameter("InstruccionRec") 
+                        + "', '" + request.getParameter("Ingredientes") + "')";
                 s.execute(insercion);
                 out.println("Receta metida correctamente.");
             
