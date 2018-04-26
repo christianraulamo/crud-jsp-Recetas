@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2018 a las 19:23:27
+-- Tiempo de generación: 26-04-2018 a las 21:16:33
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -71,9 +71,10 @@ CREATE TABLE `recetas` (
 --
 
 INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`, `Ingredientes`) VALUES
-(1, 'Paella', 31, 15, 7, 'uiehgqeq3erarhtedgrae', 'arroz, pescado y carne.'),
-(2, 'papa', 30, 10, 3, 'gegqeqegqer', 'edgeqw, regew'),
-(4, ' HDFSERDR', 34, 23, 1, 'aha', 'ahtrgfhate');
+(3, ' paella', 30, 20, 7, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras', 'arroz, pescado y carne.'),
+(4, ' pizza', 12, 6, 4, 'Se mete 12 min en el horno a 220 grados', 'Queso, tomate, pimiento.'),
+(5, ' pizza', 12, 6, 1, 'Se mete 12 min en el horno a 220 grados', 'Queso, tomate, chope'),
+(6, ' tortilla de patata', 10, 5, 5, 'Se tritura la patata, el queso y el chorizo la cebolla y se bate todo.', 'Patata, huevo queso y chorizo');
 
 --
 -- Índices para tablas volcadas
@@ -100,7 +101,7 @@ ALTER TABLE `recetas`
 -- AUTO_INCREMENT de la tabla `recetas`
 --
 ALTER TABLE `recetas`
-  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

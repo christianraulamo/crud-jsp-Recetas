@@ -18,6 +18,6 @@
       
       s.close();
     %>	
-    <script>document.location = "index.jsp"</script> 
+    <script>document.location = "listaReceta.jsp"</script> 
   </body>
 </html>

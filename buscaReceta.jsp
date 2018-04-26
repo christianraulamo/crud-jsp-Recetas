@@ -30,7 +30,7 @@
       // Si no se encuentra ningúna receta con el nombre especificado,
       // volvemos a la página principal.
       if (coincidencias == 0) {
-        out.println("<script>document.location = \"index.jsp\"</script>");
+        out.println("<script>document.location = \"listaReceta.jsp\"</script>");
       }
 
       ResultSet listado2 = s.executeQuery ("SELECT * FROM recetas WHERE nombre LIKE '%" + request.getParameter("nombre") + "%'");

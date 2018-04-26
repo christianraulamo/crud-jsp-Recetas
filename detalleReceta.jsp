@@ -55,7 +55,7 @@
                     </p>
                     <br>
                     <p class="center">
-                        <a href="index.jsp" class="btn waves-effect waves-light center">
+                        <a href="listaReceta.jsp" class="btn waves-effect waves-light center">
                             Aceptar
                             <i class="material-icons">check_circle</i>
                         </a>
