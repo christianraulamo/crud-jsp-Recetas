@@ -29,10 +29,10 @@
                 response.sendRedirect("listaReceta.jsp?q=cambia");
                 
             } else {
-                response.sendRedirect("index.jsp?q=cambia");
+                response.sendRedirect("error.jsp?q=cambia");
             }
         } catch (Exception e) {
-            response.sendRedirect("index.jsp?q=cambia");
+            response.sendRedirect("error.jsp?q=cambia");
         }
     %>
 </body>
