@@ -40,7 +40,7 @@
                                     <label for="buscaNombre"></label>
                                 </div>
                                 </td>
-                            <td>
+                            <td colspan="6">
                                 <button class="btn btn-primary" type="submit" name="aceptar">
                                     <i class="glyphicon glyphicon-search"></i> Buscar
                                 </button>
@@ -48,7 +48,7 @@
                         </tr>
                     </form>
 
-                    <tr><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Elaboración</th><th>Ingredientes</th></tr>
+                    <tr><th>Nombre</th><th>Tiempo de preparación</th><th>Nº porciones</th><th>Categoría</th><th>Ingredientes alergenos</th><th colspan="6">Ingredientes</th></tr>
                     <form method="get" action="grabaReceta.jsp">
                         <tr><td><input type="text" name="nombre" size="10"></td>
                             <td><input type="text" name="TiempoPrep" size="18"></td>
@@ -66,9 +66,11 @@
                                     <option value="10">Sopa</option>
                                     <option value="11">Pasta</option>
                                 </select></td>
-                            <td><input type="text" name="InstruccionRec"/></td>
-                            <td><input type="text" name="Ingredientes"/></td>
-                            <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-open"></span> Añadir</button></td><td></td></tr>           
+                            <td><input type="text" name="Alergenos"/></td>
+                            <td colspan="6"><input type="text" name="Ingredientes"/></td><br>
+                        <tr><th colspan="6">Elaboración</th></tr>
+                        <td colspan="6"><input type="text" name="InstruccionRec" size="135"></td>
+                        <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-open"></span> Añadir</button></td><td></td></tr>           
                     </form>
 
 
@@ -89,9 +91,11 @@
                             <input type="hidden" name="IdCate" value="<%=listado.getString("IdCate")%>">
                             <input type="hidden" name="InstruccionRec" value="<%=listado.getString("InstruccionRec")%>">
                             <input type="hidden" name="Ingredientes" value="<%=listado.getString("Ingredientes")%>">
+                            <input type="hidden" name="Alergenos" value="<%=listado.getString("Alergenos")%>">
                             <button type="submit"  class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Modificar</button>
                         </form>
-
+                    </td>
+                    <td>
                         <form method="get" action="detalleReceta.jsp">
                             <input type="hidden" name="IdRec" value="<%=listado.getString("IdRec")%>">
                             <input type="hidden" name="nombre" value="<%=listado.getString("nombre")%>">
@@ -100,10 +104,11 @@
                             <input type="hidden" name="IdCate" value="<%=listado.getString("IdCate")%>">
                             <input type="hidden" name="InstruccionRec" value="<%=listado.getString("InstruccionRec")%>">
                             <input type="hidden" name="Ingredientes" value="<%=listado.getString("Ingredientes")%>">
+                            <input type="hidden" name="Alergenos" value="<%=listado.getString("Alergenos")%>">
                             <button type="submit"  class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span> Ver</button>
                         </form>
                     </td>
-                    <td>
+                    <td colspan="6">
                         <form method="get" action="borraReceta.jsp">
                             <input type="hidden" name="IdRec" value="<%=listado.getString("IdRec")%>"/>
                             <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>

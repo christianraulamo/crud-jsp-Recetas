@@ -55,6 +55,9 @@
                     <div class="form-group">
                         <label>&nbsp;&nbsp;Ingredientes:&nbsp;</label><input type="text" size="100" name="Ingredientes" value="<%= request.getParameter("Ingredientes")%>">
                     </div>
+                    <div class="form-group">
+                        <label>&nbsp;&nbsp;Ingredientes alergenos:&nbsp;</label><input type="text" size="100" name="Alergenos" value="<%= request.getParameter("Alergenos")%>">
+                    </div>
                     <hr>
                     &nbsp;&nbsp;<a href="listaReceta.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Aceptar</button><br><br>

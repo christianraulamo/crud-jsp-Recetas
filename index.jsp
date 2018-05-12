@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"  crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-        <title>Login</title>
+        <title>Recetas</title>
     </head>
 
     <body>
@@ -19,7 +19,7 @@
         <div class="container">
             <br><br>			
             <div class="panel panel-info">
-                <div class="panel-heading text-center"><h2>Identifiquese, porfavor</h2></div>
+                <div class="panel-heading text-center"><h2>Recetas</h2><br><h2>Identifiquese, porfavor</h2></div>
                 <table class="table table-striped">
                     <form action="Validacion.jsp" method="get" accept-charset="utf-8" id="formulario" class="form-signin">
                         

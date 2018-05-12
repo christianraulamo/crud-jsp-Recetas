@@ -27,16 +27,19 @@
 
             ResultSet listado = s.executeQuery("SELECT * FROM recetas WHERE IdRec='" + request.getParameter("IdRec") + "'");
             listado.next();
-           
+
         %>
 
         <%
            
             String Ingredientes = listado.getString("Ingredientes");
+            String Alergenos = listado.getString("Alergenos");
 
             List<String> ingredientes = new ArrayList();
             ingredientes.add(
-                    Ingredientes);
+                    0, Ingredientes);
+            ingredientes.add(
+                    1, Alergenos);
 
         %>    
         <div class="container">
@@ -48,7 +51,11 @@
                     <p>
                         <i class="material-icons teal-text">label_outline</i> Ingredientes: 
                         <b><%=ingredientes.get(0)%></b>
-                     </p><br>
+                    </p><br>
+                    <p>
+                        <i class="material-icons teal-text">label_outline</i> Ingredientes alergenos: 
+                        <b><%=ingredientes.get(1)%></b>
+                    </p><br>
                     <p>
                         <i class="material-icons teal-text">label_outline</i> Elaboración: 
                         <b><%=listado.getString("InstruccionRec")%></b>

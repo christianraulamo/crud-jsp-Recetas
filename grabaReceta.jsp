@@ -28,7 +28,8 @@
                         + ", '" + Integer.valueOf(request.getParameter("NumPorc"))
                         + "', " + Integer.valueOf(request.getParameter("IdCate"))
                         + ", '" + request.getParameter("InstruccionRec") 
-                        + "', '" + request.getParameter("Ingredientes") + "')";
+                        + "', '" + request.getParameter("Ingredientes")
+                        + "', '" + request.getParameter("Alergenos")+ "')";
                 s.execute(insercion);
                 out.println("Receta metida correctamente.");
             

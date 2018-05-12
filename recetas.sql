@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2018 a las 21:16:33
+-- Tiempo de generación: 12-05-2018 a las 22:08:58
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -63,18 +63,18 @@ CREATE TABLE `recetas` (
   `NumPorc` int(11) NOT NULL,
   `IdCate` int(11) NOT NULL,
   `InstruccionRec` varchar(10000) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Ingredientes` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
+  `Ingredientes` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Alergenos` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `recetas`
 --
 
-INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`, `Ingredientes`) VALUES
-(3, ' paella', 30, 20, 7, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras', 'arroz, pescado y carne.'),
-(4, ' pizza', 12, 6, 4, 'Se mete 12 min en el horno a 220 grados', 'Queso, tomate, pimiento.'),
-(5, ' pizza', 12, 6, 1, 'Se mete 12 min en el horno a 220 grados', 'Queso, tomate, chope'),
-(6, ' tortilla de patata', 10, 5, 5, 'Se tritura la patata, el queso y el chorizo la cebolla y se bate todo.', 'Patata, huevo queso y chorizo');
+INSERT INTO `recetas` (`IdRec`, `nombre`, `TiempoPrep`, `NumPorc`, `IdCate`, `InstruccionRec`, `Ingredientes`, `Alergenos`) VALUES
+(3, ' paella', 30, 20, 7, 'Se pone la cebolla fresca a fuego lento con agua y una pastilla de un sofrito de verduras', 'Marisco', ''),
+(7, ' pizza', 12, 2, 4, 'Se mete en el horno a 220 grados', 'Tomate, pimiento, levadura', 'levadura'),
+(11, ' pizza', 12, 2, 1, 'Se mete 12 min en el horno a 220 grados', 'Queso, tomate, levadura', 'Queso, levadura');
 
 --
 -- Índices para tablas volcadas
@@ -101,7 +101,7 @@ ALTER TABLE `recetas`
 -- AUTO_INCREMENT de la tabla `recetas`
 --
 ALTER TABLE `recetas`
-  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `IdRec` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

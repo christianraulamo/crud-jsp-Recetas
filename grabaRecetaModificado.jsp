@@ -30,6 +30,7 @@
                     + ", IdCate=" + Integer.valueOf(request.getParameter("IdCate"))
                     + ", InstruccionRec='" + request.getParameter("InstruccionRec")
                     + "', Ingredientes='" + request.getParameter("Ingredientes")
+                    + "', Alergenos='" + request.getParameter("Alergenos")
                     + "' WHERE IdRec=" + Integer.valueOf(request.getParameter("IdRec"));
             s.execute(actualizacion);
             out.println("Receta actualizado correctamente.");
